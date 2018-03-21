@@ -1,0 +1,40 @@
+<div class="card-panel">
+    <div class="flow-text">
+        按钮演示
+    </div>
+    <btn (click)="showDrop()">默认按钮</btn>
+    <btn clz="btn-info" (click)="save()">保存</btn>
+    <btn [clz]="btnClass" disabled="true">取消</btn>
+    <btn clz="btn-warning" (click)="showDrop()" [disabled]="disab">不可点击</btn>
+    <btn clz="btn-warning" (click)="hidBtn()" [hidden]="hid">点击隐藏</btn>
+    <!-- Dropdown Trigger -->
+    <a class='dropdown-button btn' id="drop" href='#' data-activates='dropdown1'>Drop Me!</a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    </ul>
+</div>
+<div class="card-panel">
+    <div class="flow-text">
+        数据表格
+    </div>
+    {{data|json}}
+    <data-grid [columns]="col" [data]="data">
+        <btn (click)="addData()">保存</btn>
+        <h1>Onion</h1>
+        <div class="info">
+            <span class="flow-text">
+                Hello
+            </span>
+        </div>
+    </data-grid>
+    <data-grid [columns]="col" [data]="data1">
+        <btn (click)="addData1()">保存</btn>
+    </data-grid>
+</div>
